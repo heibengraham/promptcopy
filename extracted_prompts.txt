@@ -1,0 +1,30 @@
+Exercise 1 — Step 1.3 Prompt 
+
+Describe each CSV briefly, then plot CO₂
+per person vs % renewables
+for Sweden, USA and China (2010-2023).
+
+Give 2-3 short insights in plain English.
+
+Exercise 1 — Step 1.4 Prompt 
+
+Join the climate data with the
+country-to-region file.
+And then replot the chart by region.
+
+Exercise 1 — Step 1.6 Prompt 
+
+Using trusted sources (IEA,
+World Bank, IRENA) and the climate analysis per
+region in the other chat in this project, list the top 3 tailwinds and 3
+headwinds
+for renewables growth in Asia-Pacific over the next 3-5 years in 450
+words.
+
+Exercise 2 — Bonus Step 2.4 Prompt 
+
+Add a PDF uploader which:
+- Shows a form allowing me to select PDFs stored on my computer
+- Uploads the PDFs and stores them so that my Chat Agent can search them
+when answering questions
+- Use OpenAI to process the PDFs in a manner that makes them searchable

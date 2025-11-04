@@ -1,0 +1,8 @@
+# Exclude PDF files from git
+*.pdf
+
+# Exclude other common files that shouldn't be in git
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
