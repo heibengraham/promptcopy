@@ -14,18 +14,20 @@ body {
     padding: 0;
 }
 
-/* Container - full width responsive design */
+/* Container - flexible width from 10% to full screen */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    min-width: 10vw;
+    max-width: 100vw;
+    margin: 0;
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     min-height: 100vh;
 }
 
-/* Header */
+/* Header - scales with window width */
 header {
-    padding: 30px 20px;
+    padding: clamp(15px, 4vw, 30px) clamp(10px, 3vw, 20px);
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-align: center;
@@ -33,34 +35,34 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 12px;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    margin-bottom: clamp(6px, 1.5vw, 12px);
     font-weight: 600;
 }
 
 header p {
-    font-size: 1.1rem;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
     opacity: 0.9;
 }
 
-/* Main content */
+/* Main content - scales with window width */
 main {
-    padding: 20px;
+    padding: clamp(10px, 3vw, 20px);
 }
 
-/* Prompts container */
+/* Prompts container - responsive to very narrow widths */
 .prompts-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+    gap: clamp(10px, 2vw, 20px);
     max-width: 100%;
 }
 
-/* Individual prompt cards */
+/* Individual prompt cards - scales with window width */
 .prompt-card {
-    padding: 24px;
+    padding: clamp(12px, 3vw, 24px);
     border: 1px solid #e0e0e0;
-    border-radius: 12px;
+    border-radius: clamp(6px, 1.5vw, 12px);
     cursor: pointer;
     transition: all 0.2s ease;
     background: white;
@@ -88,28 +90,28 @@ main {
 
 .prompt-title {
     font-weight: 600;
-    font-size: 1.2rem;
-    margin-bottom: 12px;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    margin-bottom: clamp(6px, 1.5vw, 12px);
     color: #2c3e50;
 }
 
 .prompt-text {
-    font-size: 0.95rem;
+    font-size: clamp(0.75rem, 2vw, 0.95rem);
     color: #555;
     line-height: 1.6;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
 
-/* Copy icon */
+/* Copy icon - scales with container */
 .copy-icon {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: clamp(12px, 3vw, 24px);
+    right: clamp(12px, 3vw, 24px);
     opacity: 0;
     transition: opacity 0.2s ease;
     color: #667eea;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .prompt-card:hover .copy-icon {
@@ -168,41 +170,58 @@ main {
     background: #f1f1f1;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .container {
-        margin: 0 20px;
-    }
-    
+/* Responsive adjustments for very narrow widths */
+@media (max-width: 600px) {
     .prompts-container {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 768px) {
+/* Specific adjustments for extremely narrow windows (10-20% screen width) */
+@media (max-width: 400px) {
     .container {
-        margin: 0 10px;
+        min-width: 10vw;
     }
     
     .prompts-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        gap: clamp(8px, 2vw, 15px);
     }
     
-    main {
-        padding: 15px;
+    .prompt-title {
+        font-size: clamp(0.8rem, 3vw, 1rem);
     }
     
-    .prompt-card {
-        padding: 20px;
-    }
-    
-    header {
-        padding: 20px 15px;
+    .prompt-text {
+        font-size: clamp(0.7rem, 2.5vw, 0.85rem);
     }
     
     header h1 {
-        font-size: 2rem;
+        font-size: clamp(1rem, 5vw, 1.5rem);
+    }
+    
+    header p {
+        font-size: clamp(0.7rem, 3vw, 0.9rem);
+    }
+}
+
+/* Ultra-narrow mode for 10% width scenarios */
+@media (max-width: 200px) {
+    .prompt-card {
+        padding: clamp(8px, 4vw, 16px);
+    }
+    
+    .prompt-title {
+        font-size: clamp(0.7rem, 4vw, 0.9rem);
+        margin-bottom: clamp(4px, 2vw, 8px);
+    }
+    
+    .prompt-text {
+        font-size: clamp(0.6rem, 3.5vw, 0.8rem);
+        line-height: 1.4;
+    }
+    
+    .copy-icon {
+        font-size: clamp(0.8rem, 3vw, 1rem);
     }
 }
 
