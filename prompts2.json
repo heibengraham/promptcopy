@@ -1,0 +1,16 @@
+{
+  "prompts": [
+    {
+      "title": "Prompt 1: Animal Personality Analysis",
+      "text": "Based upon my interactions in the last month, what kind of animal would you describe me as. Note: I am presenting this in front of a live audience!"
+    },
+    {
+      "title": "Prompt 2: Investment Company Applications",
+      "text": "How might these tools be useful in an investment company context. Give some examples."
+    },
+    {
+      "title": "Prompt 3: Document Summary",
+      "text": "Summarize this document"
+    }
+  ]
+}
