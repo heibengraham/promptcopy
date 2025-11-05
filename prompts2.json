@@ -1,4 +1,4 @@
-{
+﻿{
   "prompts": [
     {
       "title": "Prompt 1: Animal Personality Analysis",
@@ -11,6 +11,22 @@
     {
       "title": "Prompt 3: Document Summary",
       "text": "Summarize this document"
+    },
+    {
+      "title": "Prompt 4: Investment Firm Document Summary",
+      "text": "Instruction: Summarize this document clearly and concisely for internal use.\n----\nContext: I am an associate at an investment firm preparing a short note for the portfolio management team. They need to understand the company's latest performance and financial position at a glance.\n----\nConstraints: Structure the output as three short sections:\n- Performance: Key revenue, growth, or margin highlights.\n- Financials: Notable figures such as cash flow, EBITDA, or balance sheet movements.\n- Outlook / Risks: Any forward-looking guidance or material risks mentioned."
+    },
+    {
+      "title": "Prompt 5: Collaborative Editing",
+      "text": "Let's edit this together"
+    },
+    {
+      "title": "Prompt 6: AI in Healthcare Analysis",
+      "text": "Give me an analysis of emerging applications of AI in preventive and value-based healthcare"
+    },
+    {
+      "title": "Prompt 7: Kinnevik Healthcare Research Brief",
+      "text": "Role:\nYou are an investment associate at Kinnevik researching innovation in healthcare.\n----\nInstruction:\nAnalyse emerging applications of AI in preventive and value-based healthcare, including diagnostics, care coordination, and population health.\n----\nContext:\nThis research will inform portfolio strategy for Kinnevik's digital health holdings.\n----\nExample:\nUse a concise, professional tone – similar to a short internal memo to the investment team – with 2–3 key findings under each section.\n----\nConstraints:\n-Focus on developments from 2023–2025 in the US and Europe.\n-Prioritize credible sources such as company filings, investor presentations, recognized research institutions, or tier-one publications (e.g., FierceHealthcare, Stat, Financial Times).\n- Avoid speculative or opinion-based content; flag unverified claims.\n----\nOutput:\nProduce a 300–400 word research brief structured as follows:\n- Opportunity – where AI is creating measurable value in prevention or care delivery.\n- Key Players – 3–5 companies with short descriptions.\n- Risks & Challenges – commercial, regulatory, or data-related constraints.\nInclude short source notes or citations at the end."
     }
   ]
 }
