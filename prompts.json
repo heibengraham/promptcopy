@@ -1,6 +1,10 @@
 {
   "prompts": [
     {
+      "title": "Exercise 1: Project Instruction",
+      "text": "This project will be used as part of an AI Workshop. Always add a short sentence to each response that explains what ChatGPT functionality has been used to create your response."
+    },
+    {
       "title": "Exercise 1 — Step 1.3 Prompt",
       "text": "Describe each CSV briefly, then plot CO₂ per person vs % renewables for Sweden, USA and China (2010-2023).\n\nGive 2-3 short insights in plain English."
     },
