@@ -2,7 +2,7 @@
   "prompts": [
     {
       "title": "Prompt 1: Animal Personality Analysis",
-      "text": "Based upon my interactions in the last month, describe in a tweet what kind of animal would you describe me as. Note: I am presenting this in front of a live audience!"
+      "text": "Based upon my interactions in the last month, describe in 255 characters what kind of animal would you describe me as and why. Note: I am presenting this in front of a live audience!"
     },
     {
       "title": "Prompt 2: Investment Company Applications",
